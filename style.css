@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html { 
+    background: url("https://philosophyandmind.files.wordpress.com/2018/04/the-thinker-thinking-man-2560c3971080.jpg?w=792") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: white;
+  }
+  
+  body {
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+  }
+  
+  header {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    padding-bottom: 15%;
+    width: 100%;
+    text-shadow: 2px 2px 2px black;
+  }
+  
+  .mainQuizContent {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .mainQuizContent, .questionNumber, .score {
+    text-shadow: 2px 2px 2px black;
+    font-weight: bolder;
+  }
+  
+  .mainQuizContent > h2 {
+    padding-bottom: 40px;
+  }
+  
+  header ul {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  ul li {
+    display: inline-block;
+    font-size: 26px;
+  }
+  
+  .questions {
+    text-align: left;
+    padding-left: 25%;
+  }
+  
+  .questionNumber {
+    padding-right: 20px;
+  }
+  
+  .questions .label {
+    font-size: 25px;
+  }
+  
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+  
+  .mainQuizContent > p {
+    font-size: 24px;
+    padding-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  button {
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin: 2px 1px;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:hover, button:focus {
+    border: 2px solid red;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(54, 51, 51, 0.918), 0 17px 50px 0 rgba(0, 0, 0, 0.705);
+  }
+  
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover span, button:focus span {
+    padding-right: 25px;
+  }
+  
+  button:hover span:after, button:focus span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .label {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+  
+  .label:hover input ~ .checkmark {
+    background-color: red;
+  }
+  
+  .label input:checked ~ .checkmark {
+    background-color: red;;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .label .checkmark:after {
+       top: 6px;
+      left: 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+  }
+  
+  @media screen and (min-width: 550px) {
+    header {
+      font-size: 23px;
+      padding-bottom: 10%;
+    }
+  
+    .questions {
+      padding-left: 33%;
+    }
+  
+    .questions .label {
+      font-size: 30px;
+    }
+  
+    .mainQuizContent {
+      font-size: 18px;
+    }
+  
+    button {
+      font-size: 18px;
+      margin: 3px 1.5px;
+      padding: 12px 24px;
+      margin-bottom: 20px;
+    }
+  
+    .mainQuizContent > p {
+      font-size: 30px;
+      padding-bottom: 35px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    header {
+      padding-top: 30px;
+      padding-bottom: 6%;
+      font-size: 26px;
+      width: 65%
+    }
+  
+    .mainQuizContent {
+      font-size: 22px;
+      width: 50%;
+      padding-right: 10px;
+    }
+  
+    body {
+      position: relative;
+    }
+  
+    header ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 30px;
+      text-align: left;
+      padding-left: 20px;
+    }
+  
+    ul li {
+      display: block;
+      padding-bottom: 15px;
+      font-size: 30px;
+    }
+  
+    .questions .label {
+      font-size: 35px;
+    }
+  
+    .checkmark {
+      height: 25px;
+      width: 25px;
+    }
+  
+    .label {
+      padding-left: 35px;
+    }
+  
+    .label .checkmark:after {
+         top: 8px;
+        left: 8px;
+        width: 8px;
+        height: 8px;
+    }
+  
+    button {
+      font-size: 20px;
+      margin: 4px 2px;
+      padding: 12px 24px;
+    }
+  
+    .mainQuizContent > p {
+      font-size: 40px;
+      padding-bottom: 40px;
+    }
+  
+    .questions {
+      padding-left: 30%;
+    }
+  }
