@@ -3,9 +3,10 @@
     margin: 0;
     padding: 0;
   }
-  
-  html { 
-    background: url("https://philosophyandmind.files.wordpress.com/2018/04/the-thinker-thinking-man-2560c3971080.jpg?w=792") no-repeat center center fixed; 
+
+  html {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://philosophyandmind.files.wordpress.com/2018/04/the-thinker-thinking-man-2560c3971080.jpg?w=792") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
